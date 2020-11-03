@@ -1,3 +1,37 @@
-body {
-	background-color: red;
+html, body, .inner-overlay, .background  {
+    margin: 0;
+    height: 100%;
+}
+
+.background {
+	background-image: url(./images/Flag_of_Moldova.svg);
+	background-size: contain;
+}
+
+.inner-overlay {
+	background-color: rgb(255 255 255 / 75%);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+	width: 90%;
+}
+
+.candidate-one, .candidate-two {
+	display: flex;
+}
+
+.stamp-placeholder {
+	width: 20%;
+	height: 150px;
+	background-color: aqua;
+}
+
+.description {
+	width: 80%;
+	background-color: blue;
 }
