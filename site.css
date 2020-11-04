@@ -5,7 +5,7 @@ html, body, .inner-overlay, .background  {
 }
 
 .background {
-	background-image: url(./images/Flag_of_Moldova.svg);
+	background-image: url(./images/md_flag.png);
 	background-size: 100px;
 }
 
@@ -18,15 +18,18 @@ html, body, .inner-overlay, .background  {
     justify-content: center;
 }
 
-.container {
+.container-one, .container-two {
 	width: 75%;
+	margin: 10px 0px;
+	transition: all 0.5s ease;
+	border: 3px solid;
 }
 
-.candidate-one, .candidate-two {
+.candidate, .candidate {
 	display: flex;
 }
 
-.candidate-one .frame {
+.container-one .frame {
     border: 2px solid;
 }
 
@@ -40,17 +43,17 @@ html, body, .inner-overlay, .background  {
     flex-direction: column;
 }
 
-.candidate-one .frame .f-name {
+.container-one .frame .f-name {
     font-size: 20px;
 }
-.candidate-one .frame .l-name {
+.container-one .frame .l-name {
     font-size: 25px;
 }
 
-.candidate-two .frame .f-name {
+.container-two .frame .f-name {
     font-size: 25px;
 }
-.candidate-two .frame .l-name {
+.container-two .frame .l-name {
     font-size: 30px;
 }
 
@@ -107,4 +110,14 @@ html, body, .inner-overlay, .background  {
 
 .hide {
 	display: none;
+}
+
+.bag {
+	background-image: url(./images/bag.jpg);
+	background-size: 150px;
+}
+
+.pas {
+	background-image: url(./images/pas.jpg);
+	background-size: 350px;
 }
