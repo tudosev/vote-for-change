@@ -90,3 +90,19 @@ html, body, .inner-overlay, .background  {
 .description .text {
 	font-size: 20px;
 }
+
+.text-aligner {
+	text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.voted {
+	font-size: 33px;
+    color: purple;
+}
+
+.hide {
+	display: none;
+}
