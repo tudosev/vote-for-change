@@ -1,10 +1,12 @@
 var prevSelection;
-onVoteClick = (s) => {
-    reset();
-    var element = document.querySelector(".candidate-" + s + " .round-frame");
-    element.classList.add("text-aligner");
-    element.children[0].classList.remove("hide");
-    prevSelection = s;
+onVoteClick = (selection) => {
+    if (selection !== prevSelection)
+        reset();
+
+    var element = document.querySelector(".candidate-" + selection + " .round-frame");
+    element.classList.toggle("text-aligner");
+    element.children[0].classList.toggle("hide");
+    prevSelection = selection;
 
 }
 
@@ -13,6 +15,7 @@ reset = () => {
 
     if (!element)
         return;
+
     element.classList.remove("text-aligner");
     element.children[0].classList.add("hide");
 }
