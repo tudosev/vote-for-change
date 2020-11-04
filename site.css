@@ -95,7 +95,8 @@ html, body, .inner-overlay, .background  {
 	text-align: center;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+	flex-direction: column;
+	border: 2px solid purple !important;
 }
 
 .voted {
