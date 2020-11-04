@@ -5,7 +5,7 @@ html, body, .inner-overlay, .background  {
 
 .background {
 	background-image: url(./images/Flag_of_Moldova.svg);
-	background-size: contain;
+	background-size: 100px;
 }
 
 .inner-overlay {
@@ -25,13 +25,41 @@ html, body, .inner-overlay, .background  {
 	display: flex;
 }
 
+.candidate-one .frame {
+    border: 2px solid;
+}
+
+.frame {
+	margin: 20px 20px;
+	height: 110px;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.candidate-one .frame .f-name {
+    font-size: 20px;
+}
+.candidate-one .frame .l-name {
+    font-size: 25px;
+}
+
+.candidate-two .frame .f-name {
+    font-size: 25px;
+}
+.candidate-two .frame .l-name {
+    font-size: 30px;
+}
+
 .stamp-placeholder {
-	width: 20%;
-	height: 150px;
-	background-color: aqua;
+	min-width: 150px;
+	min-height: 150px;
+	background-color: white;
 }
 
 .description {
-	width: 80%;
-	background-color: blue;
+	width: 100%;
+	background-color: whitesmoke;
 }
