@@ -121,3 +121,9 @@ html, body, .inner-overlay, .background  {
 	background-image: url(./images/pas.jpg);
 	background-size: 350px;
 }
+
+.fb-custom-styles {
+	position: absolute !important;
+    bottom: 20px;
+    right: 20px;
+}
