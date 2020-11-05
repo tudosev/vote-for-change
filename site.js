@@ -1,30 +1,20 @@
 var prevSelection;
 var stampSound = new Audio('./sounds/stamp.mp3');
+var iAmOnNextPage = false;
 onVoteClick = (selection) => {
     stampSound.play();
-
+    window.location.href = "#" + selection;
+    iAmOnNextPage = true;
     dataLayer.push({ 'event': 'click-' + selection });
+
+    registerBack(selection);
+
     var frame = document.querySelector(".container-" + selection + " .round-frame");
     frame.classList.toggle("text-aligner");
     frame.children[0].classList.toggle("hide");
     prevSelection = selection;
 
     removeOther(selection);
-}
-
-reset = (selection) => {
-    var opposite = selection === "one" ? "two" : "one";
-    var element = document.querySelector(".container-" + opposite);
-    element.classList.toggle("hide");
-    element.style.opacity = "1";
-
-    var frame = document.querySelector(".container-" + selection + " .round-frame");
-    frame.classList.toggle("text-aligner");
-    frame.children[0].classList.toggle("hide");
-
-    var bkg = document.querySelector(".background");
-    bkg.classList.remove("bag");
-    bkg.classList.remove("pas");
 }
 
 removeOther = (selection) => {
@@ -41,7 +31,7 @@ removeOther = (selection) => {
 changeBackground = (selection) => {
     var bkg = document.querySelector(".background");
 
-    var attributes = document.querySelector(".attributes."+ selection);
+    var attributes = document.querySelector(".attributes." + selection);
     attributes.classList.toggle("hide");
 
     if (selection == "one") {
@@ -50,4 +40,12 @@ changeBackground = (selection) => {
     else {
         bkg.classList.add("pas");
     }
+}
+
+registerBack = (selection) => {
+    window.onpopstate = (args) => {
+        if (iAmOnNextPage) {
+            location.reload();
+        }
+    };
 }
