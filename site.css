@@ -175,4 +175,32 @@ body::after{
 	font-size: 64px;
 	margin: 0px 40px;
 	width: 100%;
+	font-weight: bold;
+}
+
+.attributes .left,
+.attributes .right {
+	width: 50%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.attributes .left {
+	text-align: right;
+}
+
+.attributes .right {
+	text-align: left;
+}
+
+.calif-neg {
+    background-color: rgb(0,0,0,0.5);
+    color: red;
+}
+
+
+.calif-pos {
+    background-color: rgb(0,0,0,0.5);
+    color: yellow;
 }
