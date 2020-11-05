@@ -40,12 +40,10 @@ removeOther = (selection) => {
 
 changeBackground = (selection) => {
     var bkg = document.querySelector(".background");
-    var overlay = document.querySelector(".inner-overlay");
 
     var attributes = document.querySelector(".attributes."+ selection);
     attributes.classList.toggle("hide");
 
-    overlay.style.alignItems = "baseline";
     if (selection == "one") {
         bkg.classList.add("bag");
     }
