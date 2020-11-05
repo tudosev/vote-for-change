@@ -12,8 +12,12 @@ onVoteClick = (selection) => {
     var frame = document.querySelector(".container-" + selection + " .round-frame");
     frame.classList.toggle("text-aligner");
     frame.children[0].classList.toggle("hide");
-    prevSelection = selection;
 
+    var opposite = selection === "one" ? "two" : "one";
+    oppositeFrame = document.querySelector(".container-" + opposite + " .round-frame");
+    oppositeFrame.style.pointerEvents = "none";
+
+    prevSelection = selection;
     removeOther(selection);
 }
 
