@@ -38,7 +38,7 @@ body::after{
 .container-one, .container-two {
 	width: 90%;
 	margin: 10px;
-	transition: all 1s ease;
+	transition: all 1.5s ease;
 	border: 2px solid;
 }
 
@@ -92,6 +92,7 @@ body::after{
     border: 2px solid;
 	border-radius: 55px;
 	cursor: pointer;
+	background-color: #efefef;
 }
 
 .description {
