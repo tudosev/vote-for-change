@@ -2,11 +2,14 @@ html, body, .inner-overlay, .background  {
     margin: 0;
 	height: 100%;
 	overflow: hidden;
+	font-family: sans-serif;
 }
 
 .background {
 	background-image: url(./images/md_flag.png);
-	background-size: 100px;
+	background-size: 325px;
+    height: -webkit-fill-available;
+    padding: 18px;
 }
 
 .inner-overlay {
@@ -23,13 +26,14 @@ html, body, .inner-overlay, .background  {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+	width: 90%;
+	padding: 25px;
 }
 
 .container-one, .container-two {
-    width: 90%;
-    margin: 30px 0px;
-	transition: all 0.5s ease;
+	width: 90%;
+	margin: 10px;
+	transition: all 1s ease;
 	border: 2px solid;
 }
 
@@ -122,7 +126,7 @@ html, body, .inner-overlay, .background  {
 
 .bag {
 	background-image: url(./images/bag.jpg);
-	background-size: 150px;
+	background-size: 350px;
 }
 
 .pas {
@@ -132,6 +136,6 @@ html, body, .inner-overlay, .background  {
 
 .fb-custom-styles {
 	position: absolute !important;
-    bottom: 20px;
-    right: 20px;
+	bottom: 40px;
+    right: 45px;
 }

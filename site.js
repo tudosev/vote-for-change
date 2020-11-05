@@ -1,19 +1,15 @@
 var prevSelection;
+var stampSound = new Audio('./sounds/stamp.wav');
 onVoteClick = (selection) => {
-
-    if (selection === prevSelection) {
-        reset(selection);
-        prevSelection = undefined;
-        return;
-    }
+    stampSound.play();
 
     dataLayer.push({ 'event': 'click-' + selection });
-    removeOther(selection);
-
-    var element = document.querySelector(".container-" + selection + " .round-frame");
-    element.classList.toggle("text-aligner");
-    element.children[0].classList.toggle("hide");
+    var frame = document.querySelector(".container-" + selection + " .round-frame");
+    frame.classList.toggle("text-aligner");
+    frame.children[0].classList.toggle("hide");
     prevSelection = selection;
+
+    removeOther(selection);
 }
 
 reset = (selection) => {
@@ -36,7 +32,8 @@ removeOther = (selection) => {
     var element = document.querySelector(".container-" + opposite);
     element.style.opacity = "0";
     element.addEventListener('transitionend', () => {
-        element.classList.add("hide");
+        var content = document.querySelector(".content");
+        content.classList.add("hide");
         changeBackground(selection);
     });
 }
