@@ -121,7 +121,7 @@ html, body, .inner-overlay, .background  {
 }
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .bag {
@@ -138,4 +138,36 @@ html, body, .inner-overlay, .background  {
 	position: absolute !important;
 	bottom: 40px;
     right: 45px;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+	margin: 50px 0px;
+	background-color: black;
+}
+
+.title.one {
+	color: red;
+}
+
+.title.two {
+	color: yellow;
+}
+
+.result {
+	width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.attributes {
+	justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+	font-size: 64px;
+	margin: 0px 40px;
+	width: 100%;
 }
