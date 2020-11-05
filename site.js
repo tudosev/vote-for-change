@@ -1,14 +1,13 @@
 var prevSelection;
 onVoteClick = (selection) => {
 
-    dataLayer.push({'event': 'click-' + selection});
-
     if (selection === prevSelection) {
         reset(selection);
         prevSelection = undefined;
         return;
     }
 
+    dataLayer.push({'event': 'click-' + selection});
     removeOther(selection);
 
     var element = document.querySelector(".container-" + selection + " .round-frame");
