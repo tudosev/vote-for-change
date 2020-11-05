@@ -1,6 +1,8 @@
 var prevSelection;
 onVoteClick = (selection) => {
 
+    dataLayer.push({'event': 'click-' + selection});
+
     if (selection === prevSelection) {
         reset(selection);
         prevSelection = undefined;
