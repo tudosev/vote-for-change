@@ -1,5 +1,5 @@
 var prevSelection;
-var stampSound = new Audio('./sounds/stamp.wav');
+var stampSound = new Audio('./sounds/stamp.mp3');
 onVoteClick = (selection) => {
     stampSound.play();
 
