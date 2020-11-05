@@ -8,7 +8,7 @@ html, body, .inner-overlay, .background  {
 .background {
 	background-image: url(./images/md_flag.png);
 	background-size: 325px;
-    height: -webkit-fill-available;
+    height: 100%;
     padding: 18px;
 }
 
