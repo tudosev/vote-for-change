@@ -16,6 +16,16 @@ removeOther = (selection) => {
     var element = document.querySelector(".container-" + opposite);
     element.style.opacity = "0";
     element.addEventListener('transitionend', () => {
+        var element = document.querySelector(".container-" + opposite);
+        element.style.opacity = "1";
+
+        oppositeFrame = document.querySelector(".container-" + opposite + " .round-frame");
+        oppositeFrame.style.pointerEvents = "all";
+
+        var frame = document.querySelector(".container-" + selection + " .round-frame");
+        frame.classList.toggle("text-aligner");
+        frame.children[0].classList.toggle("hide");
+
         var navTo = selection === "one" ? "dodonigor.html" : "pas.html"
         window.location.href = "./" + navTo;
     });
