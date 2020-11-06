@@ -19,7 +19,7 @@ removeOther = (selection) => {
         var content = document.querySelector(".content");
         content.classList.add("hide");
         var navTo = selection === "one" ? "dodonigor.html" : "pas.html"
-        window.location.href = "./" + navTo + "?park=true";
+        window.location.href = "./" + navTo;
         changeBackground(selection);
     });
 }
