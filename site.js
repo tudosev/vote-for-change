@@ -1,14 +1,8 @@
 var prevSelection;
 var stampSound = new Audio('./sounds/stamp.mp3');
-var iAmOnNextPage = false;
 onVoteClick = (selection) => {
     stampSound.play();
-    window.location.href = "#" + selection;
-    iAmOnNextPage = true;
     dataLayer.push({ 'event': 'click-' + selection });
-
-    registerBack(selection);
-
     var frame = document.querySelector(".container-" + selection + " .round-frame");
     frame.classList.toggle("text-aligner");
     frame.children[0].classList.toggle("hide");
@@ -28,6 +22,8 @@ removeOther = (selection) => {
     element.addEventListener('transitionend', () => {
         var content = document.querySelector(".content");
         content.classList.add("hide");
+        var navTo = selection === "one" ? "dodonigor.html" : "pas.html"
+        window.location.href = "./" + navTo;
         changeBackground(selection);
     });
 }
@@ -44,12 +40,4 @@ changeBackground = (selection) => {
     else {
         bkg.classList.add("pas");
     }
-}
-
-registerBack = (selection) => {
-    window.onpopstate = (args) => {
-        if (iAmOnNextPage) {
-            location.reload();
-        }
-    };
 }
