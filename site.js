@@ -1,4 +1,3 @@
-var prevSelection;
 var stampSound = new Audio('./sounds/stamp.mp3');
 onVoteClick = (selection) => {
     stampSound.play();
@@ -10,8 +9,6 @@ onVoteClick = (selection) => {
     var opposite = selection === "one" ? "two" : "one";
     oppositeFrame = document.querySelector(".container-" + opposite + " .round-frame");
     oppositeFrame.style.pointerEvents = "none";
-
-    prevSelection = selection;
     removeOther(selection);
 }
 
@@ -26,18 +23,4 @@ removeOther = (selection) => {
         window.location.href = "./" + navTo;
         changeBackground(selection);
     });
-}
-
-changeBackground = (selection) => {
-    var bkg = document.querySelector(".background");
-
-    var attributes = document.querySelector(".attributes." + selection);
-    attributes.classList.toggle("hide");
-
-    if (selection == "one") {
-        bkg.classList.add("bag");
-    }
-    else {
-        bkg.classList.add("pas");
-    }
 }
