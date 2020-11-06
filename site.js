@@ -16,10 +16,7 @@ removeOther = (selection) => {
     var element = document.querySelector(".container-" + opposite);
     element.style.opacity = "0";
     element.addEventListener('transitionend', () => {
-        var content = document.querySelector(".content");
-        content.classList.add("hide");
         var navTo = selection === "one" ? "dodonigor.html" : "pas.html"
         window.location.href = "./" + navTo;
-        changeBackground(selection);
     });
 }
