@@ -5,7 +5,6 @@ onVoteClick = (selection) => {
     var frame = document.querySelector(".container-" + selection + " .round-frame");
     frame.classList.toggle("text-aligner");
     frame.children[0].classList.toggle("hide");
-    document.cookie = "voted=true";
     var opposite = selection === "one" ? "two" : "one";
     oppositeFrame = document.querySelector(".container-" + opposite + " .round-frame");
     oppositeFrame.style.pointerEvents = "none";
@@ -20,7 +19,7 @@ removeOther = (selection) => {
         var content = document.querySelector(".content");
         content.classList.add("hide");
         var navTo = selection === "one" ? "dodonigor.html" : "pas.html"
-        window.location.href = "./" + navTo;
+        window.location.href = "./" + navTo + "?park=true";
         changeBackground(selection);
     });
 }
