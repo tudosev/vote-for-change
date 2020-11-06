@@ -151,6 +151,7 @@ body::after{
     font-weight: bold;
     text-transform: uppercase;
 	margin-bottom: 40px;
+	padding: 10px;
 	background-color: black;
 }
 
