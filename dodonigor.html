@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="site.css">
     <script>
         if (document.cookie.toString().includes("voted")) {
-            document.cookie = 'voted=; Max-Age=0; path=/; domain=' + location.host;
+            document.cookie = 'voted=; Max-Age=-99999999;';
             location.href = "/"
         }
     </script>
