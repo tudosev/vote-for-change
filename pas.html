@@ -11,8 +11,10 @@
     <meta property="og:image:height" content="1024">
     <link rel="stylesheet" href="site.css">
     <script>
-        if(document.cookie.toString().includes("voted"))
+        if (document.cookie.toString().includes("voted")) {
+            document.cookie = 'voted=; Max-Age=0; path=/; domain=' + location.host;
             location.href = "/"
+        }
     </script>
     <script src="site.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v8.0"
@@ -53,8 +55,8 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v8.0"
         nonce="W5RlIGNg"></script>
-    <div class="fb-share-button fb-custom-styles" data-href="https://votez.life/pas" data-layout="button_count" data-size="large"><a
-            target="_blank"
+    <div class="fb-share-button fb-custom-styles" data-href="https://votez.life/pas" data-layout="button_count"
+        data-size="large"><a target="_blank"
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotez.life%2Fpas&amp;src=sdkpreparse"
             class="fb-xfbml-parse-ignore">Distribuie</a></div>
 </body>
